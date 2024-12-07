@@ -47,7 +47,7 @@
  [],
  False,
  False,
- 1733602923,
+ 1733604192,
  [('run',
    '/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/PyInstaller/bootloader/Darwin-64bit/run',
    'EXECUTABLE')],

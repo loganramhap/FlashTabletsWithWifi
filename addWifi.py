@@ -31,7 +31,7 @@ def connect_to_wifi(devices, ssid, password, password_type="WPA"):
 if __name__ == "__main__":
     ssid = input("Enter the Wi-Fi SSID: ").strip().replace(' ', '\\ ').replace("'",r"\'")
     
-    password = input("Enter the Wi-Fi Password: ").strip()
+    password = input("Enter the Wi-Fi Password: ").strip().replace(' ', '\\ ')
     password_type = input("Enter the password type (default 'WPA'): ").strip() or "WPA"
     
     devices = get_connected_devices()
