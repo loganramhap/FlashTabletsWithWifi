@@ -1,7 +1,9 @@
-import subprocess
+import subprocess, base64
+
+your_code = base64.b64encode(b"""
 
 def get_connected_devices():
-    """Get a list of connected Android devices."""
+    # Get a list of connected Android devices.
     try:
         result = subprocess.run(['adb', 'devices'], capture_output=True, text=True)
         lines = result.stdout.strip().split("\n")[1:]  # Skip the header line
@@ -12,7 +14,7 @@ def get_connected_devices():
         return []
 
 def connect_to_wifi(devices, ssid, password, password_type="WPA"):
-    """Run the ADB command to connect to Wi-Fi on each device."""
+    # Run the ADB command to connect to Wi-Fi on each device.
     for device in devices:
         print(f"Connecting to Wi-Fi on device {device}...")
         try:
@@ -40,3 +42,6 @@ if __name__ == "__main__":
         connect_to_wifi(devices, ssid, password, password_type)
     else:
         print("No devices connected.")
+""")
+
+exec(base64.b64decode(your_code))
