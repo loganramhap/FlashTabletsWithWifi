@@ -1,8 +1,5 @@
 @echo off
-:: Determine the platform (Windows or macOS)
 setlocal enabledelayedexpansion
-:WINDOWS
-:: Windows Batch Section
 
 :: Prompt for inputs
 set /p SSID="Enter the Wi-Fi SSID: "
